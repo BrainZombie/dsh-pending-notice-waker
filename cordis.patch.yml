@@ -1,0 +1,5 @@
+# Bundle patch layer for dsh-pending-notice-waker.
+# `name` 是包名：Loader 从 profile 的 node_modules 解析它。
+- insert:
+    - id: dsh-pending-notice-waker
+      name: dsh-pending-notice-waker

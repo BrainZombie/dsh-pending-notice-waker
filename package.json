@@ -1,0 +1,52 @@
+{
+  "name": "dsh-pending-notice-waker",
+  "version": "0.2.0",
+  "description": "Consume the pending-notice.json written by dsh-restart-win before a stop, wake the interrupted DSH session once on the next boot, then archive the notice. No polling, no daemon.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-agent": ">=0.2.2-alpha.3",
+    "@deepseek-ai/dsh-session-persistence": ">=0.2.2-alpha.3",
+    "cordis": "^4.0.0"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "dsh-plugin",
+    "dsh-restart-win",
+    "session-resume"
+  ],
+  "license": "MIT",
+  "author": "BrainZombie",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrainZombie/dsh-pending-notice-waker.git"
+  },
+  "homepage": "https://github.com/BrainZombie/dsh-pending-notice-waker#readme",
+  "bugs": {
+    "url": "https://github.com/BrainZombie/dsh-pending-notice-waker/issues"
+  }
+}
